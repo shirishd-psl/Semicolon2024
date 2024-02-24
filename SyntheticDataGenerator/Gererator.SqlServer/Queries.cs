@@ -46,8 +46,8 @@ namespace Generator.SqlServer
 			                           WHEN c.DATA_TYPE IN ( N'decimal', N'numeric'                     ) THEN CONCAT( N'(', c.NUMERIC_PRECISION , N',', c.NUMERIC_SCALE, N')' )
 			                       END AS DATA_TYPE_PARAMETER,
 			                       CASE c.IS_NULLABLE
-			                           WHEN N'NO'  THEN N' NOT NULL'
-			                           WHEN N'YES' THEN     N' NULL'
+			                           WHEN N'NO'  THEN 0
+			                           WHEN N'YES' THEN 1
 			                       END AS IS_NULLABLE2
 			                   FROM
 			                       INFORMATION_SCHEMA.COLUMNS AS c
@@ -63,14 +63,19 @@ namespace Generator.SqlServer
 			               FROM
 			                   q
 			               WHERE
-			                   q.TABLE_SCHEMA = '{Schema}' AND
-			                   q.TABLE_NAME   = '{Table}'
+			                   q.TABLE_SCHEMA = @Schema AND
+			                   q.TABLE_NAME   = @Table
 			               
 			               ORDER BY
 			                  [Schema], [Table];
 			               """;
 
-			return await _connection.QueryAsync<ColumnDetails>(query, new { tableDetails.Schema, tableDetails.Table });
+			return await _connection.QueryAsync<ColumnDetails>(query, param: new { tableDetails.Schema, tableDetails.Table });
+		}
+
+		public void Dispose()
+		{
+			_connection.Dispose();
 		}
 	}
 }
