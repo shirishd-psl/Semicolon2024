@@ -1,0 +1,6 @@
+@SyntheticDataGenerator_HostAddress = http://localhost:5293
+
+GET {{SyntheticDataGenerator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
