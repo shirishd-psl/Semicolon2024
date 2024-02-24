@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyntheticDataGenerator", "SyntheticDataGenerator\SyntheticDataGenerator.csproj", "{6C4D447D-8D2E-4186-BE6D-866620F3C23B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyntheticDataGenerator", "SyntheticDataGenerator\SyntheticDataGenerator.csproj", "{6C4D447D-8D2E-4186-BE6D-866620F3C23B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator.SqlServer", "Gererator.SqlServer\Generator.SqlServer.csproj", "{71138A2E-FD5C-48DD-AA48-5BE00F4A2346}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator.Common", "Generator.Common\Generator.Common.csproj", "{6593698D-1CFB-455E-A6EA-0146AFE30312}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6C4D447D-8D2E-4186-BE6D-866620F3C23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C4D447D-8D2E-4186-BE6D-866620F3C23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C4D447D-8D2E-4186-BE6D-866620F3C23B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71138A2E-FD5C-48DD-AA48-5BE00F4A2346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71138A2E-FD5C-48DD-AA48-5BE00F4A2346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71138A2E-FD5C-48DD-AA48-5BE00F4A2346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71138A2E-FD5C-48DD-AA48-5BE00F4A2346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6593698D-1CFB-455E-A6EA-0146AFE30312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6593698D-1CFB-455E-A6EA-0146AFE30312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6593698D-1CFB-455E-A6EA-0146AFE30312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6593698D-1CFB-455E-A6EA-0146AFE30312}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
